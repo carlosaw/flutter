@@ -9,39 +9,32 @@ class MeuApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-            appBar: AppBar(title: Text('Meu primeiro App')),
-            body: Column(
+            appBar: AppBar(
+                centerTitle: true,
+                title: Text('Meu primeiro App',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ))),
+            body: Column(children: <Widget>[
+              Image(width: 450, image: AssetImage('assets/muro.jpg')),
+              Row(children: [
+                Expanded(child: Container(height: 100, color: Colors.yellow)),
+                Expanded(child: Container(height: 100, color: Colors.orange)),
+                Expanded(child: Container(height: 100, color: Colors.black)),
+              ]),
+              Row(children: [
+                Expanded(child: Container(height: 100, color: Colors.pink))
+              ]),
+            ])
+            /*body: Column(
               children: <Widget>[
-                Exemplo(
-                    title: 'Texto 1',
-                    onPress: () {
-                      print('Clicou no item 1');
-                    }),
-                Exemplo(
-                    title: 'Texto 2',
-                    onPress: () {
-                      print('Clicou no item 2');
-                    })
+                Image(width: 450, image: AssetImage('assets/muro.jpg')),
+                Container(
+                    width: 250,
+                    child:
+                        Image.network('https://www.google.com.br/google.jpg'))
               ],
-            )));
-  }
-}
-
-class Exemplo extends StatelessWidget {
-  Exemplo({this.title, this.onPress});
-  var title;
-  Function onPress;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        width: 230,
-        color: Colors.red,
-        margin: EdgeInsets.all(10),
-        padding: EdgeInsets.all(10),
-        child: Column(children: [
-          Text(title),
-          FlatButton(child: Text('Clique aqui'), onPressed: onPress)
-        ]));
+            )*/
+            ));
   }
 }
