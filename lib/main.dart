@@ -18,9 +18,36 @@ class MeuApp extends StatelessWidget {
             body: Column(children: <Widget>[
               Image(width: 450, image: AssetImage('assets/muro.jpg')),
               Row(children: [
-                Expanded(child: Container(height: 100, color: Colors.yellow)),
-                Expanded(child: Container(height: 100, color: Colors.orange)),
-                Expanded(child: Container(height: 100, color: Colors.black)),
+                Column(
+                  children: [
+                    Container(),
+                    Row(
+                      children: [
+                        Text('KOTEL',
+                            style: TextStyle(
+                                fontSize: 10, fontWeight: FontWeight.bold)),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text('Jerusalém, Israel',
+                            style: TextStyle(fontSize: 10)),
+                      ],
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                            child:
+                                Icon(Icons.star, size: 20, color: Colors.blue)),
+                        Text('3.985', style: TextStyle(fontSize: 10))
+                      ],
+                    )
+                  ],
+                )
               ]),
               Row(children: [
                 Expanded(child: Container(height: 100, color: Colors.pink))
