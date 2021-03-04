@@ -1,11 +1,25 @@
 import 'package:flutter/material.dart';
-import 'src/homeTabBar.dart';
+import 'package:provider/provider.dart';
+import 'src/models/contador.dart';
+import 'src/home.dart';
+import 'src/help.dart';
 
-void main() => runApp(MeuApp());
+void main() => runApp(MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => Contador()),
+      ],
+      child: MeuApp(),
+    ));
 
 class MeuApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: HomeTabBar());
+    return MaterialApp(
+      routes: {
+        '/home': (context) => HomePage(),
+        '/help': (context) => HelpPage(),
+      },
+      initialRoute: '/home',
+    );
   }
 }
