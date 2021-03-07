@@ -53,7 +53,7 @@ class _LoginPage extends State<LoginPage> {
                     });
                   },
                 ),
-                RaisedButton(
+                ElevatedButton(
                   child: Text('Entrar'),
                   onPressed: () {
                     if (_formKey.currentState.validate()) {

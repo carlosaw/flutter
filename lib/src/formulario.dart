@@ -22,7 +22,7 @@ class _Formulario extends State<Formulario> {
               return null;
             },
           ),
-          RaisedButton(
+          ElevatedButton(
             child: Text('Enviar'),
             onPressed: () {
               if (_formkey.currentState.validate()) {

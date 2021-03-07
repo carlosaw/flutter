@@ -20,6 +20,11 @@ class HomePage extends StatelessWidget {
                   child: Text('Fazer Login'),
                   onPressed: () {
                     Navigator.pushNamed(context, '/login');
+                  }),
+              RaisedButton(
+                  child: Text('Ir para Teste'),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/teste');
                   })
             ],
           ),

@@ -4,6 +4,7 @@ import 'src/models/contador.dart';
 import 'src/home.dart';
 import 'src/help.dart';
 import 'src/login.dart';
+import 'src/teste.dart';
 
 void main() => runApp(MultiProvider(
       providers: [
@@ -20,6 +21,7 @@ class MeuApp extends StatelessWidget {
         '/home': (context) => HomePage(),
         '/help': (context) => HelpPage(),
         '/login': (context) => LoginPage(),
+        '/teste': (context) => TestePage(),
       },
       initialRoute: '/home',
     );
